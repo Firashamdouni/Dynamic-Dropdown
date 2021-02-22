@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+  <title>nested navigation</title>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="mobile-nav">
+        <span>Menu</span>
+        <div class="nav-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <ul class="nav">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="dropdown" >
+          <a href="#">Galery</a>
+          <ul>
+            <li  class="dropdown">
+              <a href="#">Galery 1</a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#">Galery sub 1</a>
+                  
+                </li>
+                <li>
+                  <a href="#">Galery sub 2</a>
+                </li>
+                <li>
+                  <a href="#">Galery sub 3</a>
+                </li>
+              </ul>     
+            </li>
+            <li>
+              <a href="#">Galery 2</a>
+            </li>
+            <li>
+              <a href="#">Galery 3</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown">
+            <li class="dropdown">
+              <a href="#">Services 1</a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#">Services sub 1</a>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#">Galery sub  2 1</a>
+                      <ul>
+                        <li class="dropdown">
+                          <a href="#">Galery sub 1 2 1</a>
+                          
+                        </li>
+                        <li>
+                          <a href="#">Galery sub 1 2 2</a>
+                        </li>
+                        <li>
+                          <a href="#">Galery sub 1 2 3</a>
+                        </li>
+                      </ul>   
+                    </li>
+                    <li>
+                      <a href="#">Galery sub 2 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Galery sub 2 3</a>
+                    </li>
+                  </ul>   
+                </li>
+                <li>
+                  <a href="#">Services sub 2</a>
+                </li>
+                <li>
+                  <a href="#">Services sub 3</a>
+                </li>
+              </ul>             
+            </li>
+            <li>
+              <a href="#">Services 2</a>
+            </li>
+            <li>
+              <a href="#">Services 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About</a>
+          
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

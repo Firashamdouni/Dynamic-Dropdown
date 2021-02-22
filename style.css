@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  width: 75%;
+  height: 100vh;
+}
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #b7b7b7;
+  line-height: 25px;
+  padding: 25px;
+}
+
+.nav {
+  background: burlywood;
+  display: flex;
+}
+
+ul li , ul li a {
+  text-decoration: none;
+  list-style: none;
+ 
+}
+
+ul li {
+   display: block; 
+  
+}
+
+ul li  a{
+  display: block; 
+  padding: 15px 25px;
+  font-size: 20px;
+  color: white;
+}
+
+ul li:hover, ul li a:hover {
+  background: #b7b7b7;
+  color: black;
+}
+
+ul li ul {
+  display: none;
+  position: absolute;
+  width: 20em;
+  background: burlywood;
+}
+
+ul li ul li a{
+  background: burlywood;
+}
+
+ul li:hover >a{
+  background: #b7b7b7;
+  color: black;
+}
+
+li:hover >ul ,li:active >ul {
+  display: block;
+}
+
+ul li ul li ul{
+  position: absolute;
+  left: 100%;
+  top: 5px;
+}
+.dropdown  .dropdown > a:hover ,
+.dropdown  .dropdown > a ,
+.dropdown > a ,
+.dropdown > a:hover,
+.dropdown.active > a,
+.dropdown.active > a:hover{
+  background: url('arrow.png') right no-repeat;
+  background-size: 15px;
+} 
+@media screen and (max-width: 768px) {
+
+  .mobile-nav {
+    display: flex;
+  }
+ 
+  ul.nav {
+    visibility: hidden;
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+
+  ul.nav.toggle {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+   
+  ul {
+    flex-direction: column;
+  }
+   
+  ul li {
+    overflow: hidden;
+    border: none;
+  }
+  
+  ul li ul {
+    position: relative;
+    width: 100%;
+    padding: 0 5%;
+    transform: translateX(-100%);
+    display: block;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: transform 400ms ease;
+  } 
+
+  li:hover >ul,li:active > ul {
+    display: block;
+  }
+  li.active > ul {
+    transform: translateX(0);
+    visibility: visible;
+    height: 100%;
+  }
+  /* any stage after first stage work with this*/
+   ul li ul li ul {
+      position: initial;
+      background: burlywood;
+      top: 0;
+      width: 96%;
+      padding: 0 2%;
+  }
+
+  .dropdown  .dropdown > a:hover ,
+  .dropdown  .dropdown > a ,
+  .dropdown > a ,
+  .dropdown > a:hover,
+  .dropdown.active > a,
+  .dropdown.active > a:hover{
+    background-position: 95% 50% ;
+  } 
+
+} 
